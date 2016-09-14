@@ -14,7 +14,7 @@ double trans_factor[10][10];
 double normalizer = 0;
 double log_5 = log(5);
 
-string norm_filepath = "norm.txt";
+string norm_filepath = "norm1.txt";
 
 
 // conf = '1234' indexes as string for each function
@@ -203,52 +203,51 @@ int main(int argc, char** argv){
 	char2index['r']	= 8;
 	char2index['d']	= 9;
 
+	ifstream input_file ("input1");
 	string ocr_potentials_filepath;
-	cout << "Enter ocr_potentials filepath : ";
-	cin >> ocr_potentials_filepath;
+	
+	ofstream out_file ("result/results_1.txt");
+	for(int i = 0; i< 5; i++){
+		input_file >> ocr_potentials_filepath;
 
-	loadOCRFactors(ocr_potentials_filepath);
+		loadOCRFactors(ocr_potentials_filepath);
 
-	int include_transition;
-	cout << "Include transition : ";
-	cin >> include_transition;
+		int include_transition;
+		input_file >> include_transition;
 
-	if(include_transition){
-		string trans_potentials_filepath;
-		cout << "Enter trans_potentials filepath : ";
-		cin >> trans_potentials_filepath;
-		loadTransFactor(trans_potentials_filepath);
+		if(include_transition){
+			string trans_potentials_filepath;
+			input_file >> trans_potentials_filepath;
+			loadTransFactor(trans_potentials_filepath);
+		}
+		
+		int include_skip;
+		input_file >> include_skip;
+		
+		string images_filepath;
+		input_file >> images_filepath;
+
+		string output_filepath;
+		input_file >> output_filepath;
+		
+		string words_filepath;
+		input_file >> words_filepath;
+
+
+		runQuery(images_filepath,output_filepath, include_transition, include_skip);
+		
+		double char_acc = getCharWiseAcc(output_filepath, words_filepath);
+		cout << "Chanracter wise accuracy :" << char_acc << endl;
+		double word_acc = getWordWiseAcc(output_filepath, words_filepath);
+		cout << "Words wise accuracy : "  << word_acc << endl;
+		double loglike = avgDataLogLike(words_filepath, images_filepath, include_transition, include_skip);
+		cout << "Avg. Dataset log-likelihood : " << loglike << endl;
+
+		out_file << images_filepath << " , " << words_filepath << " , " << include_transition << " , " << include_skip  << "---------------" << endl;
+		out_file << "Chanracter wise accuracy :" << char_acc << endl;
+		out_file << "Words wise accuracy : "  << word_acc << endl;
+		out_file << "Avg. Dataset log-likelihood : " << loglike << endl;
+		out_file << endl;
 	}
-	
-	int include_skip;
-	cout << "Include Skip : ";
-	cin >> include_skip;
-	
-	string images_filepath;
-	cout << "Enter images_filepath : ";
-	cin >> images_filepath;
-
-	string output_filepath;
-	cout << "Enter output filepath : ";
-	cin >> output_filepath;
-	
-	string words_filepath;
-	cout << "Enter words filepath : ";
-	cin >> words_filepath;
-
-
-	runQuery(images_filepath,output_filepath, include_transition, include_skip);
-	
-	ofstream out_file ("result/results_2_" + to_string(include_transition) + to_string(include_skip) + ".txt");
-	double char_acc = getCharWiseAcc(output_filepath, words_filepath);
-	cout << "Chanracter wise accuracy :" << char_acc << endl;
-	double word_acc = getWordWiseAcc(output_filepath, words_filepath);
-	cout << "Words wise accuracy : "  << word_acc << endl;
-	double loglike = avgDataLogLike(words_filepath, images_filepath, include_transition, include_skip);
-	cout << "Avg. Dataset log-likelihood : " << loglike << endl;
-
-	out_file << "Chanracter wise accuracy :" << char_acc << endl;
-	out_file << "Words wise accuracy : "  << word_acc << endl;
-	out_file << "Avg. Dataset log-likelihood : " << loglike << endl;
-	out_file.close();
+		out_file.close();
 }	

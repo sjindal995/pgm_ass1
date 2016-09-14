@@ -3,21 +3,21 @@ potentials/ocr.dat 1 potentials/trans.dat 0 data/small/images.dat data/small/out
 potentials/ocr.dat 1 potentials/trans.dat 1 data/small/images.dat data/small/output11.dat data/small/words.dat
 
 potentials/ocr.dat 0 0 data/large/allimages1.dat data/large/output1_00.dat data/large/allwords.dat
-potentials/ocr.dat 1 potentials/trans.dat 0 data/large/allimages1.dat data/large/output1_00.dat data/large/allwords.dat
-potentials/ocr.dat 1 potentials/trans.dat 1 data/large/allimages1.dat data/large/output1_00.dat data/large/allwords.dat
+potentials/ocr.dat 1 potentials/trans.dat 0 data/large/allimages1.dat data/large/output1_10.dat data/large/allwords.dat
+potentials/ocr.dat 1 potentials/trans.dat 1 data/large/allimages1.dat data/large/output1_11.dat data/large/allwords.dat
 
-potentials/ocr.dat 0 0 data/large/images.dat data/large/output00.dat data/large/allwords.dat
-potentials/ocr.dat 1 potentials/trans.dat 0 data/large/images.dat data/large/output00.dat data/large/allwords.dat
-potentials/ocr.dat 1 potentials/ 1 data/large/images.dat data/large/output00.dat data/large/allwords.dat
+potentials/ocr.dat 0 0 data/large/allimages2.dat data/large/output2_00.dat data/large/allwords.dat
+potentials/ocr.dat 1 potentials/trans.dat 0 data/large/allimages2.dat data/large/outpu2_10.dat data/large/allwords.dat
+potentials/ocr.dat 1 potentials/ 1 data/large/allimages2.dat data/large/output2_11.dat data/large/allwords.dat
 
-potentials/ocr.dat 0 0 data/large/images.dat data/large/output00.dat data/large/allwords.dat
-potentials/ocr.dat 1 potentials/ 0 data/large/images.dat data/large/output00.dat data/large/allwords.dat
-potentials/ocr.dat 1 potentials/ 1 data/large/images.dat data/large/output00.dat data/large/allwords.dat
+potentials/ocr.dat 0 0 data/large/allimages3.dat data/large/output3_00.dat data/large/allwords.dat
+potentials/ocr.dat 1 potentials/ 0 data/large/allimages3.dat data/large/output3_10.dat data/large/allwords.dat
+potentials/ocr.dat 1 potentials/ 1 data/large/allimages4.dat data/large/output3_11.dat data/large/allwords.dat
 
-potentials/ocr.dat 0 0 data/large/images.dat data/large/output00.dat data/large/allwords.dat
-potentials/ocr.dat 1 potentials/ 0 data/large/images.dat data/large/output00.dat data/large/allwords.dat
-potentials/ocr.dat 1 potentials/ 1 data/large/images.dat data/large/output00.dat data/large/allwords.dat
+potentials/ocr.dat 0 0 data/large/allimages4.dat data/large/output4_00.dat data/large/allwords.dat
+potentials/ocr.dat 1 potentials/ 0 data/large/allimages4.dat data/large/output4_10.dat data/large/allwords.dat
+potentials/ocr.dat 1 potentials/ 1 data/large/allimages4.dat data/large/output4_11.dat data/large/allwords.dat
 
-potentials/ocr.dat 0 0 data/large/images.dat data/large/output00.dat data/large/allwords.dat
-potentials/ocr.dat 1 potentials/ 0 data/large/images.dat data/large/output00.dat data/large/allwords.dat
-potentials/ocr.dat 1 potentials/ 1 data/large/images.dat data/large/output00.dat data/large/allwords.dat
+potentials/ocr.dat 0 0 data/large/allimages5.dat data/large/output5_00.dat data/large/allwords.dat
+potentials/ocr.dat 1 potentials/ 0 data/large/allimages5.dat data/large/output5_01.dat data/large/allwords.dat
+potentials/ocr.dat 1 potentials/ 1 data/large/allimages5.dat data/large/output5_11.dat data/large/allwords.dat

@@ -1,0 +1,25 @@
+data/small/images.dat , data/small/words.dat , 1 , 1---------------
+Chanracter wise accuracy :0.711765
+Words wise accuracy : 0.355769
+Avg. Dataset log-likelihood : -6.27953
+
+data/small/images.dat , data/small/words.dat , 1 , 1---------------
+Chanracter wise accuracy :0.711765
+Words wise accuracy : 0.355769
+Avg. Dataset log-likelihood : -6.27953
+
+data/small/images.dat , data/small/words.dat , 1 , 1---------------
+Chanracter wise accuracy :0.711765
+Words wise accuracy : 0.355769
+Avg. Dataset log-likelihood : -6.27953
+
+data/small/images.dat , data/small/words.dat , 1 , 1---------------
+Chanracter wise accuracy :0.711765
+Words wise accuracy : 0.355769
+Avg. Dataset log-likelihood : -6.27953
+
+data/small/images.dat , data/small/words.dat , 1 , 1---------------
+Chanracter wise accuracy :0.711765
+Words wise accuracy : 0.355769
+Avg. Dataset log-likelihood : -6.27953
+
