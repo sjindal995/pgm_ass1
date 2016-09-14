@@ -1,0 +1,3 @@
+Chanracter wise accuracy :0.708398
+Words wise accuracy : 0.314899
+Avg. Dataset log-likelihood : -6.27186
