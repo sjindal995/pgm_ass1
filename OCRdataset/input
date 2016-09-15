@@ -12,7 +12,7 @@ potentials/ocr.dat 1 potentials/ 1 data/large/allimages2.dat data/large/output2_
 
 potentials/ocr.dat 0 0 data/large/allimages3.dat data/large/output3_00.dat data/large/allwords.dat
 potentials/ocr.dat 1 potentials/ 0 data/large/allimages3.dat data/large/output3_10.dat data/large/allwords.dat
-potentials/ocr.dat 1 potentials/ 1 data/large/allimages4.dat data/large/output3_11.dat data/large/allwords.dat
+potentials/ocr.dat 1 potentials/ 1 data/large/allimages3.dat data/large/output3_11.dat data/large/allwords.dat
 
 potentials/ocr.dat 0 0 data/large/allimages4.dat data/large/output4_00.dat data/large/allwords.dat
 potentials/ocr.dat 1 potentials/ 0 data/large/allimages4.dat data/large/output4_10.dat data/large/allwords.dat

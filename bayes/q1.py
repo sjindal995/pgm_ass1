@@ -126,6 +126,7 @@ def runQueryFile(filename, query_ouput_file):
 	with open(query_ouput_file,"w") as f2:
 				f2.write("")
 	with open(filename,'r') as f:
+		n_queries = int(f.readline()[-1]);
 		for line in f:
 			line = line[:-1]
 			if(line[-1] <> ']'):

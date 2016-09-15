@@ -1,0 +1,1 @@
+python q1.py sample-bn.txt sample-query.txt bn-out.txt
