@@ -71,7 +71,7 @@ def getActiveTrail(x, y, z, output_query_file_name):
 	path_prev = []
 	for i in range(0,len(bn)+1):
 		path_prev.append(0)
-	to_visit = [[x,"c2p"]]
+	to_visit = [[x,"out"]]
 	visited = []
 	found_path = False
 	while(len(to_visit) > 0):
@@ -85,26 +85,30 @@ def getActiveTrail(x, y, z, output_query_file_name):
 				found_path = True
 				break
 			visited.append(cur)
-			if((cur[1] == "c2p") and (not cur_observed)):
+			if((cur[1] == "out") and (not cur_observed)):
 				for par in bn[cur[0]].parents:
-					if([par,"c2p"] not in visited):
-						path_prev[par] = cur[0]
-						to_visit.append([par,"c2p"])
+					if([par,"out"] not in visited):
+						if path_prev[par] == 0:
+							path_prev[par] = cur[0]
+						to_visit.append([par,"out"])
 				for child in bn[cur[0]].children:
-					if([child,"p2c"] not in visited):
-						path_prev[child] = cur[0]
-						to_visit.append([child,"p2c"])
-			elif(cur[1] == "p2c"):
+					if([child,"in"] not in visited):
+						if path_prev[child] == 0:
+							path_prev[child] = cur[0]
+						to_visit.append([child,"in"])
+			elif(cur[1] == "in"):
 				if ((not cur_observed)):
 					for child in bn[cur[0]].children:
-						if([child,"p2c"] not in visited):
-							path_prev[child] = cur[0]
-							to_visit.append([child,"p2c"])
+						if([child,"in"] not in visited):
+							if path_prev[child] == 0:
+								path_prev[child] = cur[0]
+							to_visit.append([child,"in"])
 				if (cur[0] in observed_ancestors):
 					for par in bn[cur[0]].parents:
-						if([par,"c2p"] not in visited):
-							path_prev[par] = cur[0]
-							to_visit.append([par,"c2p"])
+						if([par,"out"] not in visited):
+							if path_prev[par] == 0:
+								path_prev[par] = cur[0]
+							to_visit.append([par,"out"])
 	if(found_path):
 		path = [y]
 		cur = y
@@ -126,7 +130,7 @@ def runQueryFile(filename, query_ouput_file):
 	with open(query_ouput_file,"w") as f2:
 				f2.write("")
 	with open(filename,'r') as f:
-		n_queries = int(f.readline()[-1]);
+		n_queries = int(f.readline()[:-1]);
 		for line in f:
 			line = line[:-1]
 			if(line[-1] <> ']'):
@@ -142,3 +146,5 @@ def runQueryFile(filename, query_ouput_file):
 importBN("sample-bn.txt")
 runQueryFile("sample-query.txt","sample-query-output1.txt")
 
+# randomBN()
+# exportBN("bn.txt")

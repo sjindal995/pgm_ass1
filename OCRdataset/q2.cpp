@@ -11,7 +11,6 @@ string index2char = "etaoinshrd";
 map<char,int> char2index;
 double ocr_factor[10][1000];
 double trans_factor[10][10];
-double normalizer = 0;
 double log_5 = log(5);
 
 string norm_filepath = "norm.txt";
@@ -239,7 +238,7 @@ int main(int argc, char** argv){
 
 	runQuery(images_filepath,output_filepath, include_transition, include_skip);
 	
-	ofstream out_file ("result/results_2_" + to_string(include_transition) + to_string(include_skip) + ".txt");
+	ofstream out_file ("result/results2_" + to_string(include_transition) + to_string(include_skip) + ".txt");
 	double char_acc = getCharWiseAcc(output_filepath, words_filepath);
 	cout << "Chanracter wise accuracy :" << char_acc << endl;
 	double word_acc = getWordWiseAcc(output_filepath, words_filepath);

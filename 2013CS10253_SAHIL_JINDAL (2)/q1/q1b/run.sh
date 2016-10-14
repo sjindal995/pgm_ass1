@@ -1,0 +1,1 @@
+python q1b.py $1 $2

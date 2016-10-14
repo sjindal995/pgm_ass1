@@ -1,0 +1,5 @@
+potentials/ocr.dat 1 potentials/trans.dat 0 data/large/allimages4.dat data/large/output4_10.dat data/large/allwords.dat
+potentials/ocr.dat 1 potentials/trans.dat 1 data/large/allimages4.dat data/large/output4_11.dat data/large/allwords.dat
+potentials/ocr.dat 0 0 data/large/allimages5.dat data/large/output5_00.dat data/large/allwords.dat
+potentials/ocr.dat 1 potentials/trans.dat 0 data/large/allimages5.dat data/large/output5_01.dat data/large/allwords.dat
+potentials/ocr.dat 1 potentials/trans.dat 1 data/large/allimages5.dat data/large/output5_11.dat data/large/allwords.dat
